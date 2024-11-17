@@ -36,7 +36,7 @@ function Navbar() {
     <div className="navbar-section">
       <h1 className="navbar-title">
         <Link to="/">
-          Health <span className="navbar-sign">+</span>
+          Physiyoga <span className="navbar-sign">+</span>
         </Link>
       </h1>
 
@@ -68,7 +68,7 @@ function Navbar() {
           </a>
         </li>
         <li>
-          <Link onClick={openNav} to="/contact">
+          <Link onClick={openNav} to="/contact" className="navbar-links">
             Contact
           </Link>
         </li>
@@ -115,11 +115,17 @@ function Navbar() {
               Doctors
             </a>
           </li>
-          <li>
-            <a onClick={openNav} href="#contact">
-              Contact
-            </a>
-          </li>
+         <li>
+          <Link onClick={openNav} to="/contact">
+            Contact
+          </Link>
+        </li>
+        <button  className="navbar-btn-mobile"
+        type="button"
+        disabled={isButtonDisabled}
+        onClick={handleChatBtnClick}>
+          Login
+        </button>
         </ul>
       </div>
 

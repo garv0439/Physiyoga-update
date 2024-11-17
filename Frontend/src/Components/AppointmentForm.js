@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../Styles/AppointmentForm.css";
 import { ToastContainer, toast } from "react-toastify";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 
 function AppointmentForm() {
   useEffect(() => {
@@ -71,12 +73,12 @@ function AppointmentForm() {
 
   return (
     <div className="appointment-form-section">
-      <h1 className="legal-siteTitle">
+      {/* <h1 className="legal-siteTitle">
         <Link to="/">
           Health <span className="legal-siteSign">+</span>
         </Link>
-      </h1>
-
+      </h1> */}
+      <Navbar />
       <div className="form-container">
         <h2 className="form-title">
           <span>Book Appointment Online</span>
@@ -154,14 +156,14 @@ function AppointmentForm() {
             Confirm Appointment
           </button>
 
-          <p className="success-message" style={{display: isSubmitted ? "block" : "none"}}>Appointment details has been sent to the patients phone number via SMS.</p>
+          <p className="success-message" style={{ display: isSubmitted ? "block" : "none" }}>Appointment details has been sent to the patients phone number via SMS.</p>
         </form>
       </div>
 
-      <div className="legal-footer">
+      {/* <div className="legal-footer">
         <p>© 2013-2023 Health+. All rights reserved.</p>
-      </div>
-
+      </div> */}
+      <Footer />
       <ToastContainer autoClose={5000} limit={1} closeButton={false} />
     </div>
   );

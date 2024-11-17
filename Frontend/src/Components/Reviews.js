@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { customerReviews } from "../Scripts/reviews";
 import "../Styles/Reviews.css";
 
@@ -7,19 +7,17 @@ function Reviews() {
   const reviewsLength = customerReviews.length - 1;
   const [review, setReview] = useState(0);
 
-  // back to previous review
+  // Back to previous review
   const backBtnClick = () => {
-    setReview(review <= 0 ? reviewsLength : review - 1);
-    handleReviewsUpdation();
+    setReview((prevReview) => (prevReview <= 0 ? reviewsLength : prevReview - 1));
   };
 
-  // go to newer review
+  // Go to next review
   const frontBtnClick = () => {
-    setReview(review >= reviewsLength ? 0 : review + 1);
-    handleReviewsUpdation();
+    setReview((prevReview) => (prevReview >= reviewsLength ? 0 : prevReview + 1));
   };
 
-  // update reviews
+  // Update reviews based on the current index
   const handleReviewsUpdation = () => {
     const reviewMessage = customerReviews[review];
     rName = reviewMessage.name;
@@ -27,7 +25,16 @@ function Reviews() {
     rMessage = reviewMessage.message;
   };
 
-  // list review on visit
+  // Automatically change reviews every 6 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      frontBtnClick();
+    }, 6000);
+
+    return () => clearInterval(interval); // Clear the interval on component unmount
+  }, []);
+
+  // List review on visit
   handleReviewsUpdation();
 
   return (
