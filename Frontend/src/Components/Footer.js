@@ -10,7 +10,7 @@ function Footer() {
         <div className="ft-info">
           <div className="ft-info-p1">
             <p className="ft-title">
-              Health <span className="ft-sign">+</span>
+             Physiyoga <span className="ft-sign">+</span>
             </p>
             <p className="ft-description">
               Talk to online doctors and get medical advice, online
@@ -86,7 +86,7 @@ function Footer() {
       </div>
 
       <div className="ft-copyright">
-        <p>© 2013-2023 Health+. All rights reserved.</p>
+        <p>© 2013-2023 Physiyoga. All rights reserved.</p>
 
         <ul className="ft-social-links">
           <li>

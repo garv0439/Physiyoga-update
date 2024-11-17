@@ -6,6 +6,7 @@ import Legal from "./Pages/Legal";
 import NotFound from "./Pages/NotFound";
 import Appointment from "./Pages/Appointment";
 import Contact from "./Pages/Contact";
+import Login from "./Pages/PrimeMembers/Login";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
           <Route path="/appointment" element={<Appointment />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/contact" element={<Contact />} /> {/* Contact route */}
+          <Route path="/login" element={<Login />} /> {/* Contact route */}
+
         </Routes>
       </Router>
     </div>
