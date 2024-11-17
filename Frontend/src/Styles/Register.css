@@ -1,0 +1,130 @@
+/* Center the registration form */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2c3e50, #1a252f); /* Deep navy to charcoal gradient */
+    font-family: "Arial", sans-serif;
+    position: relative; /* Required to position the back button */
+  }
+  
+  /* Position the back button */
+  .back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #34495e; /* Darker slate blue */
+    border: none;
+    color: #ecf0f1; /* Light gray */
+    font-size: 14px;
+    cursor: pointer;
+    text-align: left;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .back-btn:hover {
+    background-color: #16a085; /* Elegant turquoise color */
+    color: #fff;
+  }
+  
+  /* Style for registration box */
+  .register-box {
+    background-color: #1e2a33; /* Dark premium charcoal blue */
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8); /* Stronger shadow for a deeper effect */
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+  }
+  
+  /* Heading */
+  h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #f39c12; /* Rich gold for a premium touch */
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Form styling */
+  .form-group {
+    margin-bottom: 25px;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #bdc3c7; /* Light gray for a subtle contrast */
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #7f8c8d; /* Muted gray border */
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #34495e; /* Premium dark gray-blue */
+    color: #ecf0f1; /* Light gray text */
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #f39c12; /* Gold highlight for focus */
+    box-shadow: 0px 0px 6px rgba(243, 156, 18, 0.6); /* Gold glow on focus */
+  }
+  
+  /* Error message */
+  .error-message {
+    color: #e74c3c; /* Bright red for errors */
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  
+  /* Success message */
+  .success-message {
+    color: #2ecc71; /* Green for success */
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  
+  /* Button */
+  .btn {
+    background-color: #f39c12; /* Rich gold for the button */
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .btn:hover {
+    background-color: #e67e22; /* Darker gold on hover */
+  }
+  
+  .btn:focus {
+    outline: none;
+  }
+  .ppp{
+    padding-top: 20px;
+}
+  .login-link {
+    color: #f39c12;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .login-link:hover {
+    color: #e67e22;
+  }
+  

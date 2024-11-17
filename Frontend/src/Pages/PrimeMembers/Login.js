@@ -31,9 +31,18 @@ const Login = () => {
     }
   };
 
+  const handleBack = () => {
+    navigate("/"); // Navigate to the home page ("/")
+  };
+  
+  const handleRegisterRedirect = () => {
+    navigate("/register"); // Redirect to the register page
+  };
+
   return (
     <div className="login-container">
       <div className="login-box">
+        <button className="back-btn" onClick={handleBack}>← Back</button>
         <h2>Physiyoga Login</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -63,6 +72,12 @@ const Login = () => {
             Login
           </button>
         </form>
+        <p className="ppp">
+          New user?{" "}
+          <span className="register-link" onClick={handleRegisterRedirect}>
+            Register here
+          </span>
+        </p>
       </div>
     </div>
   );

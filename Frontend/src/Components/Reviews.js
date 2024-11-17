@@ -1,32 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { customerReviews } from "../Scripts/reviews";
 import "../Styles/Reviews.css";
 
 function Reviews() {
+  let rMessage, rName, rLocation;
   const reviewsLength = customerReviews.length - 1;
   const [review, setReview] = useState(0);
 
-  // Back to the previous review
+  // back to previous review
   const backBtnClick = () => {
-    setReview((prev) => (prev <= 0 ? reviewsLength : prev - 1));
+    setReview(review <= 0 ? reviewsLength : review - 1);
+    handleReviewsUpdation();
   };
 
-  // Go to the next review
+  // go to newer review
   const frontBtnClick = () => {
-    setReview((prev) => (prev >= reviewsLength ? 0 : prev + 1));
+    setReview(review >= reviewsLength ? 0 : review + 1);
+    handleReviewsUpdation();
   };
 
-  // Automatically change review every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setReview((prev) => (prev >= reviewsLength ? 0 : prev + 1));
-    }, 5000);
+  // update reviews
+  const handleReviewsUpdation = () => {
+    const reviewMessage = customerReviews[review];
+    rName = reviewMessage.name;
+    rLocation = reviewMessage.location;
+    rMessage = reviewMessage.message;
+  };
 
-    return () => clearInterval(interval); // Cleanup on component unmount
-  }, [reviewsLength]);
-
-  const { name: rName, location: rLocation, message: rMessage } =
-    customerReviews[review];
+  // list review on visit
+  handleReviewsUpdation();
 
   return (
     <div className="review-section" id="reviews">
@@ -35,7 +37,7 @@ function Reviews() {
           More over <span className="rw-text-num">1500+ Customers</span>
         </p>
 
-        <p className="rw-text-desc">Don't believe us, Check clients' words</p>
+        <p className="rw-text-desc">Don't believe us, Check clients word</p>
 
         <p className="rw-text-format">
           <span className="rw-text-quote1">''</span>

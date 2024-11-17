@@ -7,6 +7,7 @@ import NotFound from "./Pages/NotFound";
 import Appointment from "./Pages/Appointment";
 import Contact from "./Pages/Contact";
 import Login from "./Pages/PrimeMembers/Login";
+import Register from "./Pages/PrimeMembers/Register";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/contact" element={<Contact />} /> {/* Contact route */}
           <Route path="/login" element={<Login />} /> {/* Contact route */}
+          <Route path="/register" element={<Register />} />
+
 
         </Routes>
       </Router>
